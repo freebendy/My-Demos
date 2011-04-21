@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/paintpad">
+        <file>resources/tool_star.png</file>
+        <file>resources/filenew.png</file>
+        <file>resources/filesave.png</file>
+        <file>resources/head.png</file>
+        <file>resources/kontact_contacts.png</file>
+        <file>resources/kopeteavailable.png</file>
+        <file>resources/QT_original_R.png</file>
+        <file>resources/ship0021.png</file>
+        <file>resources/tool_img.png</file>
+        <file>resources/tool_line.xpm</file>
+        <file>resources/tool_meta.xpm</file>
+        <file>resources/tool_oval.xpm</file>
+        <file>resources/tool_rect.xpm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="avatar">dtxianlu_big.jpg</file>
+    </qresource>
+</RCC>

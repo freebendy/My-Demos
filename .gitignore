@@ -4,3 +4,5 @@ bin
 proguard.cfg
 .project
 default.properties
+*.pro.user
+*.pro.user.*
