@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+    <Button
+        android:text="Bind"
+        android:id="@+id/ButtonBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/ButtonInvoke"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Invoke"></Button>
+
+    <Button
+        android:id="@+id/ButtonRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Release"></Button>
+
+</LinearLayout>
