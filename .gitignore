@@ -6,3 +6,4 @@ proguard.cfg
 default.properties
 *.pro.user
 *.pro.user.*
+*-build-desktop
