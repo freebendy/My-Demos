@@ -4,6 +4,14 @@
 #include "cocktailsort.h"
 #include "combsort.h"
 #include "quicksort.h"
+#include "selectionsort.h"
+#include "heapsort.h"
+//#include "heap.h"
+#include "insertsort.h"
+#include "shellsort.h"
+#include "mergesort.h"
+#include "countingsort.h"
+#include "radixsort.h"
 
 /**
   * 排序算法
@@ -34,7 +42,7 @@
     原地合併排序 — O(n2)
     二叉排序树排序 （Binary tree sort） — O(n log n)期望时间; O(n2)最坏时间; 需要 O(n)額外空間
     鸽巢排序 (Pigeonhole sort) — O(n+k); 需要 O(k) 額外空間
-    基數排序 （radix sort）— O(n·k); 需要 O(n) 額外空間
+    基數排序 （radix sort）— O(n*k); 需要 O(n) 額外空間
     Gnome 排序 — O(n2)
     图书馆排序 — O(n log n) with high probability, 需要 (1+ε)n 額外空間
 
@@ -112,12 +120,96 @@ void quickTest()
     printArray( array, Array_Length );
 }
 
+void selectionTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length );
+    printf( "Before selection sort:\n" );
+    printArray( array, Array_Length );
+    selectionSort( array, Array_Length );
+    printf( "\nAfter selection sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void heapTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length );
+    printf( "Before heap sort:\n" );
+    printArray( array, Array_Length );
+    heapSort( array, Array_Length );
+    printf( "\nAfter heap sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void insertTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length );
+    printf( "Before insert sort:\n" );
+    printArray( array, Array_Length );
+    insertSort( array, Array_Length );
+    printf( "\nAfter insert sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void shellTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length );
+    printf( "Before shell sort:\n" );
+    printArray( array, Array_Length );
+    shellSort( array, Array_Length );
+    printf( "\nAfter shell sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void mergeTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length );
+    printf( "Before merge sort:\n" );
+    printArray( array, Array_Length );
+    mergeSort( array, 0, Array_Length - 1 );
+    printf( "\nAfter merge sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void countingTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length, 1, 500 );
+    printf( "Before counting sort:\n" );
+    printArray( array, Array_Length );
+    mergeSort( array, 0, Array_Length - 1 );
+    printf( "\nAfter counting sort:\n" );
+    printArray( array, Array_Length );
+}
+
+void radixTest()
+{
+    int array[Array_Length];
+    initArray( array, Array_Length, 1, 500 );
+    printf( "Before radix sort:\n" );
+    printArray( array, Array_Length );
+    mergeSort( array, 0, Array_Length - 1 );
+    printf( "\nAfter radix sort:\n" );
+    printArray( array, Array_Length );
+}
+
 int main(int argc, char *argv[])
 {
 //    bubbleTest();
 //    cocktailTest();
 //    combTest();
-    quickTest();
+//    quickTest();
+//    selectionTest();
+//    heapTest();
+//    insertTest();
+//    shellTest();
+//    mergeTest();
+//    countingTest();
+    radixTest();
     system("pause");
     return 0;
 }

@@ -20,4 +20,12 @@ HEADERS += \
     bubblesort.h \
     cocktailsort.h \
     combsort.h \
-    quicksort.h
+    quicksort.h \
+    selectionsort.h \
+    heapsort.h \
+    heap.h \
+    insertsort.h \
+    shellsort.h \
+    mergesort.h \
+    radixsort.h \
+    countingsort.h
