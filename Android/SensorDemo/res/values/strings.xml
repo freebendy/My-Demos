@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">SensorDemo!</string>
+    <string name="app_name">SensorDemo</string>
+    <string name="title">SensorDemo</string>
+    <string name="myTextView1">Current Temperature：</string>
+    <string name="myTextView2">Current Magnetic x：</string>
+    <string name="myTextView3">Current Magnetic y：</string>
+    <string name="myTextView4">Current Magnetic z：</string>
+    <string name="myTextView5">Current Accelerometer x：</string>
+    <string name="myTextView6">Current Accelerometer y：</string>
+    <string name="myTextView7">Current Accelerometer z：</string>
+    <string name="myTextView8">Current Orientation x：</string>
+    <string name="myTextView9">Current Orientation y：</string>
+    <string name="myTextView10">Current Orientation z：</string>
+    <string name="myTextView11">Current Light：</string>
+</resources>
