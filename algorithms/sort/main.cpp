@@ -14,63 +14,63 @@
 #include "radixsort.h"
 
 /**
-  * ÅÅÐòËã·¨
+  * æŽ’åºç®—æ³•
   * http://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95#.E7.A9.A9.E5.AE.9A.E6.80.A7
   */
 
 /**
-  * ±È½ÏÅÅÐòÓÐºÜ¶àÐÔÄÜÉÏµÄ¸ù±¾ÏÞÖÆ¡£ÈÎºÎÒ»ÖÖ±È½ÏÅÅÐòÖÁÉÙÐèÒªO(nlogn)±È½Ï²Ù×÷¡£
-  * ¹é²¢ÅÅÐò£¬¶ÑÅÅÐòÔÚËûÃÇ±ØÐë±È½ÏµÄ´ÎÊýÉÏÊÇ½¥½ø×îÓÅµÄ¡£
+  * æ¯”è¾ƒæŽ’åºæœ‰å¾ˆå¤šæ€§èƒ½ä¸Šçš„æ ¹æœ¬é™åˆ¶ã€‚ä»»ä½•ä¸€ç§æ¯”è¾ƒæŽ’åºè‡³å°‘éœ€è¦O(nlogn)æ¯”è¾ƒæ“ä½œã€‚
+  * å½’å¹¶æŽ’åºï¼Œå †æŽ’åºåœ¨ä»–ä»¬å¿…é¡»æ¯”è¾ƒçš„æ¬¡æ•°ä¸Šæ˜¯æ¸è¿›æœ€ä¼˜çš„ã€‚
   *
-  * ·Ç±È½ÏÅÅÐòËã·¨(»ùÊýÅÅÐò£¬¼ÆÊýÅÅÐò£¬Í°ÅÅÐò)Í¨¹ý·Ç±È½Ï²Ù×÷ÄÜÔÚO(n)Íê³É£¬ÕâÊ¹ËûÃÇÄÜ¹»»Ø±Ü
-  * O(nlogn)Õâ¸öÏÂ½ç£¨¼ÙÉèÔªËØÊÇ¶¨Öµ£©¡£
+  * éžæ¯”è¾ƒæŽ’åºç®—æ³•(åŸºæ•°æŽ’åºï¼Œè®¡æ•°æŽ’åºï¼Œæ¡¶æŽ’åº)é€šè¿‡éžæ¯”è¾ƒæ“ä½œèƒ½åœ¨O(n)å®Œæˆï¼Œè¿™ä½¿ä»–ä»¬èƒ½å¤Ÿå›žé¿
+  * O(nlogn)è¿™ä¸ªä¸‹ç•Œï¼ˆå‡è®¾å…ƒç´ æ˜¯å®šå€¼ï¼‰ã€‚
   *
-  * ±È½ÏÅÅÐòÔÚ¿ØÖÆ±È½Ïº¯Êý·½ÃæÓÐÏÔÖøÓÅÊÆ£¬Òò´Ë±È½ÏÅÅÐòÄÜ¶Ô¸÷ÖÖÊý¾ÝÀàÐÍ½øÐÐÅÅÐò£¬²¢ÇÒ¿ÉÒÔºÜºÃ
-  * µØ¿ØÖÆÒ»¸öÐòÁÐÈçºÎ±»ÅÅÐò¡£±È½ÏÅÅÐò¿ÉÒÔ¸üºÃµØÊÊÓ¦¸´ÔÓË³Ðò£¨ÀýÈç¸¡µãÊý£©¡£²¢ÇÒ£¬Ò»µ©±È½Ïº¯
-  * ÊýÍê³É£¬ÈÎºÎ±È½ÏËã·¨¶¼¿ÉÒÔ²»¾­ÐÞ¸ÄµØÊ¹ÓÃ£»¶ø·Ç±È½ÏÅÅÐò¶ÔÊý¾ÝÀàÐÍµÄÒªÇó¸üÑÏ¸ñ¡£ÕâÖÖÁé»îÐÔ
-  * ºÍÉÏÊö±È½ÏÅÅÐòÔÚÏÖ´ú¼ÆËã»úµÄÖ´ÐÐÐ§ÂÊÒ»Æðµ¼ÖÂÁË±È½ÏÅÅÐò±»¸ü¶àµØÓ¦ÓÃÔÚÁË´ó¶àÊýÊµ¼Ê¹¤×÷ÖÐ¡£
+  * æ¯”è¾ƒæŽ’åºåœ¨æŽ§åˆ¶æ¯”è¾ƒå‡½æ•°æ–¹é¢æœ‰æ˜¾è‘—ä¼˜åŠ¿ï¼Œå› æ­¤æ¯”è¾ƒæŽ’åºèƒ½å¯¹å„ç§æ•°æ®ç±»åž‹è¿›è¡ŒæŽ’åºï¼Œå¹¶ä¸”å¯ä»¥å¾ˆå¥½
+  * åœ°æŽ§åˆ¶ä¸€ä¸ªåºåˆ—å¦‚ä½•è¢«æŽ’åºã€‚æ¯”è¾ƒæŽ’åºå¯ä»¥æ›´å¥½åœ°é€‚åº”å¤æ‚é¡ºåºï¼ˆä¾‹å¦‚æµ®ç‚¹æ•°ï¼‰ã€‚å¹¶ä¸”ï¼Œä¸€æ—¦æ¯”è¾ƒå‡½
+  * æ•°å®Œæˆï¼Œä»»ä½•æ¯”è¾ƒç®—æ³•éƒ½å¯ä»¥ä¸ç»ä¿®æ”¹åœ°ä½¿ç”¨ï¼›è€Œéžæ¯”è¾ƒæŽ’åºå¯¹æ•°æ®ç±»åž‹çš„è¦æ±‚æ›´ä¸¥æ ¼ã€‚è¿™ç§çµæ´»æ€§
+  * å’Œä¸Šè¿°æ¯”è¾ƒæŽ’åºåœ¨çŽ°ä»£è®¡ç®—æœºçš„æ‰§è¡Œæ•ˆçŽ‡ä¸€èµ·å¯¼è‡´äº†æ¯”è¾ƒæŽ’åºè¢«æ›´å¤šåœ°åº”ç”¨åœ¨äº†å¤§å¤šæ•°å®žé™…å·¥ä½œä¸­ã€‚
   */
 
 /**
-  ÎÈ¶¨:
-    Ã°ÅÝÅÅÐò£¨bubble sort£© ¡ª O(n2)
-    ¼¦Î²¾ÆÅÅÐò (Cocktail sort,Ë«ÏòµÄÃ°ÅÝÅÅÐò) ¡ª O(n2)
-    ²åÈëÅÅÐò £¨insertion sort£©¡ª O(n2)
-    Í°ÅÅÐò £¨bucket sort£©¡ª O(n); ÐèÒª O(k) î~Íâ¿Õég
-    ¼ÆÊýÅÅÐò (counting sort) ¡ª O(n+k); ÐèÒª O(n+k) î~Íâ¿Õég
-    ¹é²¢ÅÅÐò £¨merge sort£©¡ª O(n log n); ÐèÒª O(n) î~Íâ¿Õég
-    Ô­µØºÏãÅÅÐò ¡ª O(n2)
-    ¶þ²æÅÅÐòÊ÷ÅÅÐò £¨Binary tree sort£© ¡ª O(n log n)ÆÚÍûÊ±¼ä; O(n2)×î»µÊ±¼ä; ÐèÒª O(n)î~Íâ¿Õég
-    ¸ë³²ÅÅÐò (Pigeonhole sort) ¡ª O(n+k); ÐèÒª O(k) î~Íâ¿Õég
-    »ù”µÅÅÐò £¨radix sort£©¡ª O(n*k); ÐèÒª O(n) î~Íâ¿Õég
-    Gnome ÅÅÐò ¡ª O(n2)
-    Í¼Êé¹ÝÅÅÐò ¡ª O(n log n) with high probability, ÐèÒª (1+¦Å)n î~Íâ¿Õég
+  ç¨³å®š:
+    å†’æ³¡æŽ’åºï¼ˆbubble sortï¼‰ â€” O(n2)
+    é¸¡å°¾é…’æŽ’åº (Cocktail sort,åŒå‘çš„å†’æ³¡æŽ’åº) â€” O(n2)
+    æ’å…¥æŽ’åº ï¼ˆinsertion sortï¼‰â€” O(n2)
+    æ¡¶æŽ’åº ï¼ˆbucket sortï¼‰â€” O(n); éœ€è¦ O(k) é¡å¤–ç©ºé–“
+    è®¡æ•°æŽ’åº (counting sort) â€” O(n+k); éœ€è¦ O(n+k) é¡å¤–ç©ºé–“
+    å½’å¹¶æŽ’åº ï¼ˆmerge sortï¼‰â€” O(n log n); éœ€è¦ O(n) é¡å¤–ç©ºé–“
+    åŽŸåœ°åˆä½µæŽ’åº â€” O(n2)
+    äºŒå‰æŽ’åºæ ‘æŽ’åº ï¼ˆBinary tree sortï¼‰ â€” O(n log n)æœŸæœ›æ—¶é—´; O(n2)æœ€åæ—¶é—´; éœ€è¦ O(n)é¡å¤–ç©ºé–“
+    é¸½å·¢æŽ’åº (Pigeonhole sort) â€” O(n+k); éœ€è¦ O(k) é¡å¤–ç©ºé–“
+    åŸºæ•¸æŽ’åº ï¼ˆradix sortï¼‰â€” O(n*k); éœ€è¦ O(n) é¡å¤–ç©ºé–“
+    Gnome æŽ’åº â€” O(n2)
+    å›¾ä¹¦é¦†æŽ’åº â€” O(n log n) with high probability, éœ€è¦ (1+Îµ)n é¡å¤–ç©ºé–“
 
-  ²»ÎÈ¶¨£º
-    ßx“ñÅÅÐò £¨selection sort£©¡ª O(n2)
-    Ï£ –ÅÅÐò £¨shell sort£©¡ª O(n log n) Èç¹ûÊ¹ÓÃ×î¼ÑµÄ¬FÔÚ°æ±¾
-    ×éºÏÅÅÐò ¡ª O(n log n)
-    ¶ÑÅÅÐò £¨heapsort£©¡ª O(n log n)
-    Æ½»¬ÅÅÐò ¡ª O(n log n)
-    ¿ìËÙÅÅÐò £¨quicksort£©¡ª O(n log n) ÆÚÍû•rég, O(n2) ×î‰ÄÇé›r; Œ¦ì¶´óµÄ¡¢y”µ´®ÁÐÒ»°ãÏàÐÅÊÇ×î¿ìµÄÒÑÖªÅÅÐò
-    Introsort ¡ª O(n log n)
-    Patience sorting ¡ª O(n log n + k) ×î»µÇé›r•rég£¬ÐèÒª î~ÍâµÄ O(n + k) ¿Õég£¬Ò²ÐèÒªÕÒµ½×îéLµÄßfÔö×ÓÐòÁÐ£¨longest increasing subsequence£©
+  ä¸ç¨³å®šï¼š
+    é¸æ“‡æŽ’åº ï¼ˆselection sortï¼‰â€” O(n2)
+    å¸Œçˆ¾æŽ’åº ï¼ˆshell sortï¼‰â€” O(n log n) å¦‚æžœä½¿ç”¨æœ€ä½³çš„ç¾åœ¨ç‰ˆæœ¬
+    ç»„åˆæŽ’åº â€” O(n log n)
+    å †æŽ’åº ï¼ˆheapsortï¼‰â€” O(n log n)
+    å¹³æ»‘æŽ’åº â€” O(n log n)
+    å¿«é€ŸæŽ’åº ï¼ˆquicksortï¼‰â€” O(n log n) æœŸæœ›æ™‚é–“, O(n2) æœ€å£žæƒ…æ³; å°æ–¼å¤§çš„ã€äº‚æ•¸ä¸²åˆ—ä¸€èˆ¬ç›¸ä¿¡æ˜¯æœ€å¿«çš„å·²çŸ¥æŽ’åº
+    Introsort â€” O(n log n)
+    Patience sorting â€” O(n log n + k) æœ€åæƒ…æ³æ™‚é–“ï¼Œéœ€è¦ é¡å¤–çš„ O(n + k) ç©ºé–“ï¼Œä¹Ÿéœ€è¦æ‰¾åˆ°æœ€é•·çš„éžå¢žå­åºåˆ—ï¼ˆlongest increasing subsequenceï¼‰
   */
 
 /**
-    ½»“QÅÅÐò·¨
-        Ã°ÅÝÅÅÐò | ¼¦Î²¾ÆÅÅÐò | ÆæÅ¼ÅÅÐò | ÊáÅÅÐò | Gnome sort | ¿ìËÙÅÅÐò
-    ßx“ñÅÅÐò·¨
-        Ñ¡ÔñÅÅÐò | ¶ÑÅÅÐò
-    ²åÈëÅÅÐò·¨
-        ²åÈëÅÅÐò | Ï£¶ûÅÅÐò | Tree sort | Library sort | Patience sorting
-    ¹é²¢ÅÅÐò·¨
-        ¹é²¢ÅÅÐò | Strand sort
-    ·Ç±ÈÝ^ÅÅÐò·¨
-        »ùÊýÅÅÐò | Í°ÅÅÐò | ¼ÆÊýÅÅÐò | ¸ë³²ÅÅÐò | Burstsort | Bead sort
-    ÆäËû
-        ÍØÆËÅÅÐò | ÅÅÐò¾W½j | Bitonic sorter | Batcher odd-even mergesort | Pancake sorting
-    µÍÐ§ÅÅÐò·¨
+    äº¤æ›æŽ’åºæ³•
+        å†’æ³¡æŽ’åº | é¸¡å°¾é…’æŽ’åº | å¥‡å¶æŽ’åº | æ¢³æŽ’åº | Gnome sort | å¿«é€ŸæŽ’åº
+    é¸æ“‡æŽ’åºæ³•
+        é€‰æ‹©æŽ’åº | å †æŽ’åº
+    æ’å…¥æŽ’åºæ³•
+        æ’å…¥æŽ’åº | å¸Œå°”æŽ’åº | Tree sort | Library sort | Patience sorting
+    å½’å¹¶æŽ’åºæ³•
+        å½’å¹¶æŽ’åº | Strand sort
+    éžæ¯”è¼ƒæŽ’åºæ³•
+        åŸºæ•°æŽ’åº | æ¡¶æŽ’åº | è®¡æ•°æŽ’åº | é¸½å·¢æŽ’åº | Burstsort | Bead sort
+    å…¶ä»–
+        æ‹“æ‰‘æŽ’åº | æŽ’åºç¶²çµ¡ | Bitonic sorter | Batcher odd-even mergesort | Pancake sorting
+    ä½Žæ•ˆæŽ’åºæ³•
         Bogosort | Stooge sort
   */
 
