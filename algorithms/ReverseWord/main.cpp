@@ -34,6 +34,8 @@ void reverseWords( char* arr, int length )
             spaces ++;
         }
     }
+
+    std::cout << "spaces: " << spaces << "." << std::endl;
     int reverseLength = length;
 
     while ( spaces > 0 )
@@ -57,6 +59,6 @@ void reverseWords( char* arr, int length )
 int main(int argc, char *argv[])
 {
     reverseWords( array, 14 );
-    system("pause");
+//    system("pause");
     return 0;
 }
