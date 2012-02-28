@@ -8,3 +8,4 @@ default.properties
 *.pro.user.*
 *-build-desktop
 *~
+*.swp

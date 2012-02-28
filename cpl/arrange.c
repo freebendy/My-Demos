@@ -3,9 +3,9 @@
 struct stu {
     char sex;
     int length;
-//    char name[10];
+    char name[10];
 //    long l;
-    long l[10];
+//    long l[10];
 };
 
 struct stu1 {
