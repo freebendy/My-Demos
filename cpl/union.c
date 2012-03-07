@@ -6,7 +6,7 @@ union u1 {
     long l;
 };
 
-int main(char **argv, int argc)
+int main(int argc, char **argv)
 {
     printf("char: %ld\n", sizeof(char));
     printf("short: %ld\n", sizeof(short));

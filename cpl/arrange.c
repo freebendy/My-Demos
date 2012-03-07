@@ -14,7 +14,7 @@ struct stu1 {
     long l;
 };
 
-int main(char **argv, int argc)
+int main(int argc, char **argv)
 {
     struct stu test;
 //    printf("%ld\n", sizeof(test.name));

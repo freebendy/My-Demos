@@ -6,7 +6,7 @@ int strindex(char source[], char searchfor[]);
 
 char pattern[] = "ould";
 
-int main(char **argv[], int argc) 
+int main(int argc, char *argv[]) 
 {
     char line[MAXLINE];
     int found = 0;

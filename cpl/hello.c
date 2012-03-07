@@ -7,7 +7,7 @@ void test(int a[])
     printf("sizeof a is :%ld\n", sizeof(a));
 }
 
-int main(char argv[], int argc)
+int main(int argc, char *argv[])
 {
     char buf[1024];
     //The length of the memory by byte.
