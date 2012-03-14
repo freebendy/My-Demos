@@ -13,3 +13,4 @@ default.properties
 *.swp
 *.o
 *.s
+*.i
