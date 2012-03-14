@@ -52,6 +52,7 @@ int partition( int array[], int left, int right, int pivotIndex )
         }
     }
     swap( array[storeIndex], array[right] );
+    printf("\nAfter partition from %d to %d, pivotIndex is %d, pivotValue is %d\n", left, right, pivotIndex, pivotValue);
     printArray( array, left, right );
     return storeIndex;
 }

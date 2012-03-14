@@ -1,4 +1,5 @@
 .classpath
+a.out
 gen
 bin
 proguard.cfg
@@ -9,3 +10,5 @@ default.properties
 *-build-desktop
 *~
 *.swp
+*.o
+*.s

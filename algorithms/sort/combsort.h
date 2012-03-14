@@ -37,7 +37,7 @@ void combSort( int array[], int length )
     {
         if ( gap > 1 )
         {
-            gap = gap / 1;
+            gap = gap / Shrink;
         }
 
         swapped = false;

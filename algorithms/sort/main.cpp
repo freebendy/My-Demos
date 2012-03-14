@@ -202,14 +202,14 @@ int main(int argc, char *argv[])
 //    bubbleTest();
 //    cocktailTest();
 //    combTest();
-//    quickTest();
+    quickTest();
 //    selectionTest();
 //    heapTest();
 //    insertTest();
 //    shellTest();
 //    mergeTest();
 //    countingTest();
-    radixTest();
+//    radixTest();
     system("pause");
     return 0;
 }
