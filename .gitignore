@@ -1,4 +1,5 @@
 .classpath
+.settings
 a.out
 gen
 bin
