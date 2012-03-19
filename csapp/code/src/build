@@ -1,0 +1,5 @@
+# !/bin/bash
+gcc -shared -fPIC -o libcsapp.so csapp.c -I ../include 
+gcc -c csapp.c -I ../include
+ar rcs libcsapp.a csapp.o
+

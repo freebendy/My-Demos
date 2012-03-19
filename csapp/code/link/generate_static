@@ -1,0 +1,7 @@
+# !/bin/bash
+
+gcc -c addvec.c multvec.c
+ar rcs libvector.a addvec.o multvec.o
+
+gcc -O2 -c main2.c
+gcc -static -o p2a.out main2.o ./libvector.a

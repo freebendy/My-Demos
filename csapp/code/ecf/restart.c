@@ -13,13 +13,13 @@ int main()
     Signal(SIGINT, handler);
 
     if (!sigsetjmp(buf, 1)) 
-	printf("starting\n");
+	    printf("starting\n");
     else 
-	printf("restarting\n");
+	    printf("restarting\n");
 
     while(1) {
-	Sleep(1);
-	printf("processing...\n");
+	    Sleep(1);
+	    printf("processing...\n");
     }
     exit(0);
 }

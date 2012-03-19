@@ -7,10 +7,10 @@ void handler(int sig)
 
     printf("BEEP\n");
     if (++beeps < 5)  
-	Alarm(1); /* Next SIGALRM will be delivered in 1 second */
+	    Alarm(1); /* Next SIGALRM will be delivered in 1 second */
     else {
-	printf("BOOM!\n");
-	exit(0);
+	    printf("BOOM!\n");
+	    exit(0);
     }
 }
 
@@ -20,8 +20,9 @@ int main()
     Alarm(1); /* Next SIGALRM will be delivered in 1s */
 
     while (1) {
-	;  /* Signal handler returns control here each time */
+	    ;  /* Signal handler returns control here each time */
     }
+    printf("ready to exit!");
     exit(0);
 }
 /* $end alarm */

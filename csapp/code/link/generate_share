@@ -1,0 +1,5 @@
+# !/bin/bash
+
+gcc -shared -fPIC -o libvector.so addvec.c multvec.c
+
+gcc -o p2so.out main2.c ./libvector.so
