@@ -1,0 +1,6 @@
+# !/bin/bash
+gcc echoclient.c ../src/csapp.c -o echoclient.out -I ../include -lpthread
+gcc echo.c echoserveri.c ../src/csapp.c -o echoserveri.out -I ../include -lpthread
+gcc hostinfo.c ../src/csapp.c -o hostinfo.out -I ../include -lpthread
+gcc tiny/tiny.c ../src/csapp.c -o tiny.out -I ../include -lpthread
+gcc tiny/cgi-bin/adder.c ../src/csapp.c -o adder.out -I ../include -lpthread

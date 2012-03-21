@@ -13,12 +13,12 @@ int main()
     int i, *ptr;
 
     for (i = 0; i < N; i++) {
-	ptr = Malloc(sizeof(int));                    //line:conc:norace:createthread1
-	*ptr = i;                                     //line:conc:norace:createthread2
-	Pthread_create(&tid[i], NULL, thread, ptr);   //line:conc:norace:createthread3
+        ptr = Malloc(sizeof(int));                    //line:conc:norace:createthread1
+        *ptr = i;                                     //line:conc:norace:createthread2
+        Pthread_create(&tid[i], NULL, thread, ptr);   //line:conc:norace:createthread3
     } //line:conc:norace:endloop
     for (i = 0; i < N; i++) 
-	Pthread_join(tid[i], NULL);
+        Pthread_join(tid[i], NULL);
     exit(0);
 }
 

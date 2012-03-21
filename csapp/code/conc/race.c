@@ -13,9 +13,9 @@ int main()
     int i;
 
     for (i = 0; i < N; i++) 
-	Pthread_create(&tid[i], NULL, thread, &i); //line:conc:race:createthread
+        Pthread_create(&tid[i], NULL, thread, &i); //line:conc:race:createthread
     for (i = 0; i < N; i++) 
-	Pthread_join(tid[i], NULL);
+        Pthread_join(tid[i], NULL);
     exit(0);
 }
 
@@ -23,7 +23,7 @@ int main()
 void *thread(void *vargp) 
 {
     int myid = *((int *)vargp);  //line:conc:race:derefarg
-    printf("Hello from thread %d\n", myid);
+    printf("Hello from thread %d, thread id : %lu\n", myid, Pthread_self());
     return NULL;
 }
 /* $end race */

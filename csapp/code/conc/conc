@@ -1,0 +1,14 @@
+# !/bin/bash
+gcc echoserverp.c ../src/csapp.c ../netp/echo.c -o echoserverp.out -I ../include -lpthread
+gcc echoservers.c ../src/csapp.c ../netp/echo.c -o echoservers.out -I ../include -lpthread
+gcc echoservert.c ../src/csapp.c ../netp/echo.c -o echoservert.out -I ../include -lpthread
+gcc select.c ../src/csapp.c ../netp/echo.c -o select.out -I ../include -lpthread
+gcc hello.c ../src/csapp.c -o hello.out -I ../include -lpthread
+gcc badcnt.c ../src/csapp.c -o badcnt.out -I ../include -lpthread
+gcc norace.c ../src/csapp.c -o norace.out -I ../include -lpthread
+gcc rand.c -o rand.out
+gcc rand_r.c -o rand_r.out
+gcc echoservert_pre.c sbuf.c echo_cnt.c ../src/csapp.c -o echoservert_pre.out -I ../include -lpthread
+gcc race.c ../src/csapp.c -o race.out -I ../include -lpthread
+gcc ctime_ts.c ../src/csapp.c -o ctime_ts.out -I ../include -lpthread
+gcc sharing.c ../src/csapp.c -o sharing.out -I ../include -lpthread

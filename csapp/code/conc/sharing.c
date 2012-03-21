@@ -7,11 +7,11 @@ char **ptr;  /* global variable */ //line:conc:sharing:ptrdec
 
 int main() 
 {
-    int i;  
+    long i;  
     pthread_t tid;
     char *msgs[N] = {
-	"Hello from foo",  
-	"Hello from bar"   
+        "Hello from foo",  
+        "Hello from bar"   
     };
 
     ptr = msgs; 
@@ -22,9 +22,9 @@ int main()
 
 void *thread(void *vargp) 
 {
-    int myid = (int)vargp;
+    long myid = (long)vargp;
     static int cnt = 0; //line:conc:sharing:cntdec
-    printf("[%d]: %s (cnt=%d)\n", myid, ptr[myid], ++cnt); //line:conc:sharing:stack
+    printf("[%ld]: %s (cnt=%d)\n", myid, ptr[myid], ++cnt); //line:conc:sharing:stack
     return NULL;
 }
 /* $end sharing */
