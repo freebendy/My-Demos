@@ -137,7 +137,10 @@ void heapTest()
     initArray( array, Array_Length );
     printf( "Before heap sort:\n" );
     printArray( array, Array_Length );
-    heapSort( array, Array_Length );
+    heapSort_Recursive( array, Array_Length );
+
+//    heapSort_Loop( array, Array_Length );
+
     printf( "\nAfter heap sort:\n" );
     printArray( array, Array_Length );
 }
@@ -202,9 +205,9 @@ int main(int argc, char *argv[])
 //    bubbleTest();
 //    cocktailTest();
 //    combTest();
-    quickTest();
+//    quickTest();
 //    selectionTest();
-//    heapTest();
+    heapTest();
 //    insertTest();
 //    shellTest();
 //    mergeTest();

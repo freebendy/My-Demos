@@ -33,6 +33,9 @@
         2.把堆首（最大值）和堆尾互换
         3.把堆的尺寸缩小1，并调用Max_Heapify(0),目的是把新的数组顶端数据调整到相应位置
         4.重复步骤2，直到堆的尺寸为1
+
+    最大堆 -> 递减数组
+    最小堆 -> 递增数组
   */
 
 // index 从0开始，加1修正
@@ -55,11 +58,13 @@ int right( int i )
     return 2*i + 2;
 }
 
-void Max_Heapify( int array[], int length, int i )
+// 递归版本
+void Max_Heapify_Recursive( int array[], int length, int i )
 {
     int l = left( i );
     int r = right( i );
     int largest = i;
+
     if ( l < length && array[l] > array[largest] )
     {
         largest = l;
@@ -73,27 +78,60 @@ void Max_Heapify( int array[], int length, int i )
     if ( largest != i )
     {
         swap( array[i], array[largest] );
-        Max_Heapify( array, length, largest );
+        Max_Heapify_Recursive( array, length, largest );
     }
 }
 
-void Build_Max_Heap( int array[],int length )
+// 循环版本
+void Max_Heapify_Loop( int array[], int i )
 {
-    for ( int i = length - 1; i >= 0; i-- )
+    int index = i;
+    while (index > 0)
     {
-        Max_Heapify( array, length, i );
+        int p = parent(index);
+        if (array[p] >= array[index])
+            break;
+
+        swap( array[index], array[p] );
+        index = p;
     }
 }
 
-void heapSort( int array[], int length )
+// 构建最大堆
+void Build_Max_Heap_Recursive( int array[],int length )
 {
-    Build_Max_Heap( array, length );
-    int size = length;
-    for ( int i = length -1; i >=1; i-- )
+    for ( int i = length - 1; i >= 0; --i )
+    {
+        Max_Heapify_Recursive( array, length, i );
+    }
+}
+
+// 构建最大堆
+void Build_Max_Heap_Loop( int array[],int length )
+{
+    for ( int i = 0; i < length; ++i )
+    {
+        Max_Heapify_Loop( array, i );
+    }
+}
+
+void heapSort_Recursive( int array[], int length )
+{
+    Build_Max_Heap_Recursive( array, length );
+    for ( int i = length - 1; i > 0; i-- )
     {
         swap( array[0], array[i] );
-        size--;
-        Max_Heapify( array, size, 0 );
+        Max_Heapify_Recursive( array, i, 0 );
+    }
+}
+
+void heapSort_Loop( int array[], int length )
+{
+    Build_Max_Heap_Loop( array, length );
+    for ( int i = length - 1; i > 0; --i )
+    {
+        swap( array[0], array[i] );
+        Build_Max_Heap_Loop( array, i);
     }
 }
 
