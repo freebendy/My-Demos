@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Proxy", "Proxy.vcproj", "{E499B323-0A22-4D01-913E-313838E884CE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E499B323-0A22-4D01-913E-313838E884CE}.Debug.ActiveCfg = Debug|Win32
+		{E499B323-0A22-4D01-913E-313838E884CE}.Debug.Build.0 = Debug|Win32
+		{E499B323-0A22-4D01-913E-313838E884CE}.Release.ActiveCfg = Release|Win32
+		{E499B323-0A22-4D01-913E-313838E884CE}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

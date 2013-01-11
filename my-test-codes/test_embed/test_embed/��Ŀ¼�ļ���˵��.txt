@@ -1,0 +1,5 @@
+1.data是数据库目录
+2.share\english是语言目录
+3.include是工程所需要的头文件
+4.embedded\DLL\debug目录下的libmysqld.lib是编译工程需要的库，libmysqld.dll是运行需要的库
+5.my.ini是mysql的配置文件

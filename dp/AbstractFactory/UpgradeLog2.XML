@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AbstractFactory">
+</Property><Property Name="解决方案文件" Value="D:\Ben's Codes\设计模式\AbstractFactory\AbstractFactory.sln">
+</Property><Property Name="用户选项文件" Value="D:\Ben's Codes\设计模式\AbstractFactory\AbstractFactory.suo">
+</Property><Property Name="Date" Value="2012年1月4日">
+</Property><Property Name="Time" Value="21:37">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="2" Project="" Source="AbstractFactory.sln" Description="创建备份文件 D:\Ben's Codes\设计模式\AbstractFactory\AbstractFactory.sln.old 时出错">
+</Event><Event ErrorLevel="2" Project="" Source="AbstractFactory.suo" Description="创建备份文件 D:\Ben's Codes\设计模式\AbstractFactory\AbstractFactory.suo.old 时出错">
+</Event><Event ErrorLevel="0" Project="AbstractFactory" Source="AbstractFactory.vcproj" Description="已不再支持对本地 IIS 服务器的 Web 部署。Web 部署生成工具已从项目设置中删除。">
+</Event><Event ErrorLevel="1" Project="AbstractFactory" Source="AbstractFactory.vcproj" Description="此应用程序已更新，包含了与 Windows Vista 的用户帐户控制(UAC)功能相关的设置。默认情况下，当运行在启用了 UAC 的 Windows Vista 上时，此应用程序被标记为以与启动它的进程相同的权限运行。此标记还禁止应用程序以虚拟化方式运行。您可以从此项目的属性页中更改与 UAC 相关的设置。">
+</Event><Event ErrorLevel="0" Project="AbstractFactory" Source="AbstractFactory.vcproj" Description="已成功地将项目文件备份为“D:\Ben's Codes\设计模式\AbstractFactory\AbstractFactory.vcproj.8.00.old”。">
+</Event><Event ErrorLevel="0" Project="AbstractFactory" Source="AbstractFactory.vcproj" Description="项目升级成功。">
+</Event><Event ErrorLevel="3" Project="AbstractFactory" Source="AbstractFactory.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AbstractFactory.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="AbstractFactory.sln" Description="Converted">
+</Event></UpgradeLog>

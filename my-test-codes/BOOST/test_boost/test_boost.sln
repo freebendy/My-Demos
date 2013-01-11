@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_boost", "test_boost\test_boost.vcproj", "{2C635296-6A96-43E6-A302-E348DD1135AC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2C635296-6A96-43E6-A302-E348DD1135AC}.Debug.ActiveCfg = Debug|Win32
+		{2C635296-6A96-43E6-A302-E348DD1135AC}.Debug.Build.0 = Debug|Win32
+		{2C635296-6A96-43E6-A302-E348DD1135AC}.Release.ActiveCfg = Release|Win32
+		{2C635296-6A96-43E6-A302-E348DD1135AC}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
