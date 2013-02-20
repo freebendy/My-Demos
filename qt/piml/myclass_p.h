@@ -13,8 +13,10 @@ public:
     MyClassPrivate();
     void function();
 
+    void hello();
+
 private:
-    friend class MyClassPrivate;
+//    friend class MyClassPrivate;
 };
 
 #endif // MYCLASS_P_H

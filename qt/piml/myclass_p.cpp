@@ -10,5 +10,11 @@ void MyClassPrivate::function()
 {
     cout << Q_FUNC_INFO << endl;
     Q_Q(MyClass);
-    q->function();
+    q->hello();
+}
+
+void MyClassPrivate::hello()
+{
+    cout << Q_FUNC_INFO << endl;
+    function();
 }

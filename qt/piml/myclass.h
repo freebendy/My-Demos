@@ -12,12 +12,14 @@ public:
     MyClass(QObject *parent = 0);
     void function();
 
+    void hello();
+
 signals:
 
 public slots:
 
 private:
-    friend class MyClassPrivate;
+//    friend class MyClassPrivate;
 
 };
 

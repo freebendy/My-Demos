@@ -12,5 +12,10 @@ void MyClass::function()
 {
     cout << Q_FUNC_INFO << endl;
     Q_D(MyClass);
-    d->function();
+    d->hello();
+}
+
+void MyClass::hello()
+{
+    cout << Q_FUNC_INFO << endl;
 }
