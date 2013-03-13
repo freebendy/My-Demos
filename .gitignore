@@ -3,6 +3,7 @@
 *.out
 gen
 bin
+obj
 proguard.cfg
 .project
 default.properties
@@ -17,3 +18,4 @@ default.properties
 *.a
 *.so
 tags
+*.suo

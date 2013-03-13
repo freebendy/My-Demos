@@ -11,6 +11,7 @@ void MyClassPrivate::function()
     cout << Q_FUNC_INFO << endl;
     Q_Q(MyClass);
     q->hello();
+//    q_func()->hello();
 }
 
 void MyClassPrivate::hello()

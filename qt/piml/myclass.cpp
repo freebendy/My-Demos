@@ -13,6 +13,7 @@ void MyClass::function()
     cout << Q_FUNC_INFO << endl;
     Q_D(MyClass);
     d->hello();
+//    d_func()->hello();
 }
 
 void MyClass::hello()
