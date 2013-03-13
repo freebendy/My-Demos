@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransparentWindow", "TransparentWindow\TransparentWindow.csproj", "{D1A99F12-EBCA-4300-8ECD-DD30D76CE291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransparentWindowWPF", "TransparentWindowWPF\TransparentWindowWPF.csproj", "{B2BA3BB8-CB0B-48D8-831D-F200AF00CA71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIFDecoder", "GIFDecoder\GIFDecoder.csproj", "{108F5767-E4C8-4B4B-B9F1-A679A67F99BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.0TransparentWindow", "2.0TransparentWindow\2.0TransparentWindow.csproj", "{B3663B74-0EDA-4688-9181-5892D88B39D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser", "WebBrowser\WebBrowser.csproj", "{A4959980-B50B-44F5-9425-ED97E1BFA2B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1A99F12-EBCA-4300-8ECD-DD30D76CE291}.Debug|x86.ActiveCfg = Debug|x86
+		{D1A99F12-EBCA-4300-8ECD-DD30D76CE291}.Debug|x86.Build.0 = Debug|x86
+		{D1A99F12-EBCA-4300-8ECD-DD30D76CE291}.Release|x86.ActiveCfg = Release|x86
+		{D1A99F12-EBCA-4300-8ECD-DD30D76CE291}.Release|x86.Build.0 = Release|x86
+		{B2BA3BB8-CB0B-48D8-831D-F200AF00CA71}.Debug|x86.ActiveCfg = Debug|x86
+		{B2BA3BB8-CB0B-48D8-831D-F200AF00CA71}.Debug|x86.Build.0 = Debug|x86
+		{B2BA3BB8-CB0B-48D8-831D-F200AF00CA71}.Release|x86.ActiveCfg = Release|x86
+		{B2BA3BB8-CB0B-48D8-831D-F200AF00CA71}.Release|x86.Build.0 = Release|x86
+		{108F5767-E4C8-4B4B-B9F1-A679A67F99BF}.Debug|x86.ActiveCfg = Debug|x86
+		{108F5767-E4C8-4B4B-B9F1-A679A67F99BF}.Debug|x86.Build.0 = Debug|x86
+		{108F5767-E4C8-4B4B-B9F1-A679A67F99BF}.Release|x86.ActiveCfg = Release|x86
+		{108F5767-E4C8-4B4B-B9F1-A679A67F99BF}.Release|x86.Build.0 = Release|x86
+		{B3663B74-0EDA-4688-9181-5892D88B39D1}.Debug|x86.ActiveCfg = Debug|x86
+		{B3663B74-0EDA-4688-9181-5892D88B39D1}.Debug|x86.Build.0 = Debug|x86
+		{B3663B74-0EDA-4688-9181-5892D88B39D1}.Release|x86.ActiveCfg = Release|x86
+		{B3663B74-0EDA-4688-9181-5892D88B39D1}.Release|x86.Build.0 = Release|x86
+		{A4959980-B50B-44F5-9425-ED97E1BFA2B9}.Debug|x86.ActiveCfg = Debug|x86
+		{A4959980-B50B-44F5-9425-ED97E1BFA2B9}.Debug|x86.Build.0 = Debug|x86
+		{A4959980-B50B-44F5-9425-ED97E1BFA2B9}.Release|x86.ActiveCfg = Release|x86
+		{A4959980-B50B-44F5-9425-ED97E1BFA2B9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

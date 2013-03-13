@@ -1,0 +1,23 @@
+﻿<Window x:Class="TransparentWindowWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gifLib="clr-namespace:GifImageLib"
+        Title="MainWindow" 
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Topmost="True"
+        Width="286"
+        Height="368">
+    <Grid>
+        <gifLib:GifImage Source="main.gif" Height="329" Width="264" Stretch="Uniform">
+            <gifLib:GifImage.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="退出" Click="App_Exit"/>
+                    <MenuItem Header="关于" Click="App_About"/>
+                </ContextMenu>
+            </gifLib:GifImage.ContextMenu>
+        </gifLib:GifImage>
+    </Grid>
+</Window>
