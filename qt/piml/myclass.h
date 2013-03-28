@@ -2,7 +2,7 @@
 #define MYCLASS_H
 
 #include <QObject>
-#include <qglobal.h>
+#include <QtGlobal>
 class MyClassPrivate;
 class MyClass : public QObject
 {

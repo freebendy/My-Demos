@@ -1,9 +1,8 @@
 #ifndef MYCLASS_P_H
 #define MYCLASS_P_H
 
-#include <qglobal.h>
+#include <QtGlobal>
 #include <private/qobject_p.h>
-
 #include "myclass.h"
 
 class MyClassPrivate : QObjectPrivate
